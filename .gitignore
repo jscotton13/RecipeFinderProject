@@ -1,0 +1,14 @@
+# JavaFX SDK
+/javafx-sdk-20/
+
+# Maven
+/.mvn/
+/target/
+
+# IntelliJ IDEA project files
+.idea/
+*.iml
+out/
+
+# Ignore JAR files (if locally stored, not managed by Maven)
+*.jar
