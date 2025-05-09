@@ -35,8 +35,12 @@ public class RecipeSearch {
             //encodes query to be used in api url
             String encodedQuery = URLEncoder.encode(query, StandardCharsets.UTF_8);
 
-            //creates API URL with the encoded query, app ID, and app key
-            String url = "https://api.edamam.com/search?q=" + encodedQuery + "&app_id=" + APP_ID + "&app_key=" + APP_KEY;
+            // Construct the Edamam v2 API URL
+            String url = "https://api.edamam.com/api/recipes/v2"
+                    + "?type=public"
+                    + "&q=" + encodedQuery
+                    + "&app_id=" + APP_ID
+                    + "&app_key=" + APP_KEY;
 
             //connects to API and makes GET request
             HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
